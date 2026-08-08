@@ -284,33 +284,71 @@
       .forEach((b) => b.classList.add("is-active"));
   }
 
-  /* ---------------------- Contact form → mailto ---------------------- */
+  /* ---------------------- Contact form ---------------------- */
+  // Posts to Formspree, which forwards each enquiry to MARS_EMAIL. If the endpoint hasn't
+  // been filled in yet, we fall back to opening the visitor's email app so the form is
+  // never a dead end.
+  const MARS_EMAIL = "infomarsdigital@gmail.com";
   const form = document.getElementById("contactForm");
   const note = document.getElementById("formNote");
+  const submitBtn = document.getElementById("cf-submit");
+
   if (form) {
+    const setNote = (msg, state) => {
+      if (!note) return;
+      note.textContent = msg;
+      note.classList.remove("is-ok", "is-error");
+      if (state) note.classList.add(state);
+    };
+
+    const fields = () => {
+      const d = new FormData(form);
+      const get = (k) => (d.get(k) || "").toString().trim();
+      return { name: get("name"), email: get("email"), company: get("company"), message: get("message") };
+    };
+
+    const mailtoFallback = () => {
+      const f = fields();
+      const subject = `New project enquiry: ${f.name}${f.company ? " · " + f.company : ""}`;
+      const body =
+        `Name: ${f.name}\n` +
+        `Email: ${f.email}\n` +
+        (f.company ? `Company: ${f.company}\n` : "") +
+        `\nWhere I want to be seen:\n${f.message}\n`;
+      window.location.href =
+        `mailto:${MARS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setNote(`Opening your email app. If nothing happens, write to us at ${MARS_EMAIL}.`, "is-ok");
+    };
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      const data = new FormData(form);
-      const name = (data.get("name") || "").toString().trim();
-      const email = (data.get("email") || "").toString().trim();
-      const company = (data.get("company") || "").toString().trim();
-      const message = (data.get("message") || "").toString().trim();
 
-      const subject = `New project enquiry — ${name}${company ? " · " + company : ""}`;
-      const body =
-        `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        (company ? `Company: ${company}\n` : "") +
-        `\nWhere I want to be seen:\n${message}\n`;
-
-      const href = `mailto:hello@mars.agency?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = href;
-
-      if (note) {
-        note.textContent = "Opening your email app — if nothing happens, write us at hello@mars.agency.";
-        note.classList.add("is-ok");
+      const action = form.getAttribute("action") || "";
+      if (action.indexOf("YOUR_FORM_ID") !== -1 || action.indexOf("formspree.io") === -1) {
+        mailtoFallback();
+        return;
       }
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+      setNote("Sending your enquiry…");
+
+      fetch(action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          form.reset();
+          setNote("Thanks, that's landed. We'll come back to you within one working day.", "is-ok");
+        })
+        .catch(() => {
+          setNote(`That didn't send. Please email us directly at ${MARS_EMAIL}.`, "is-error");
+        })
+        .finally(() => {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Map my launch"; }
+        });
     });
   }
 })();

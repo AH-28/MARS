@@ -103,22 +103,58 @@ photography once you have it.
   nav/footer, icon as favicon). The tagline is dropped below the minimum lockup size, per spec.
 - **Motion** respects `prefers-reduced-motion`.
 
+## The contact form
+
+The form posts to **Formspree**, which forwards each enquiry to `infomarsdigital@gmail.com`.
+
+**One-time setup — the form will not deliver until this is done.** In `contact.html`, the form's
+`action` is currently a placeholder:
+
+```html
+<form ... action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
+
+Create a form at [formspree.io](https://formspree.io) pointed at `infomarsdigital@gmail.com`, copy
+the endpoint it gives you, and replace `YOUR_FORM_ID` with the real ID. Then confirm the
+verification email Formspree sends on the first submission.
+
+Until that's done the form **falls back to opening the visitor's email app** (`mailto:`) rather
+than erroring, so the site is never visibly broken — but you'll only receive enquiries from
+people who have a mail client set up. That is the exact gap Formspree closes.
+
+Other details worth knowing:
+
+- A honeypot field (`_gotcha`, hidden off-canvas in `.hp`) silently drops most bot spam.
+- `_subject` sets the subject line of the email you receive.
+- Because the visitor's address is in a field named `email`, you can hit Reply directly.
+- Free tier is 50 submissions/month. Formspree emails you when you approach it.
+
 ## Things to update before going live
 
-1. **The NFC range** — review the five products on `nfc.html` (see above) and swap the CSS
+1. **Formspree endpoint** — see above. Nothing reaches your inbox from webmail users until
+   `YOUR_FORM_ID` is replaced.
+2. **The NFC range** — review the five products on `nfc.html` (see above) and swap the CSS
    mockups for real photography.
-2. **Social links** — Instagram / LinkedIn in the footer point to `#`. Add the real URLs.
-3. **Phone number** — the guidelines list a placeholder (`+974 XXXX XXXX`); add the real one
-   if you want it on the site (currently only `hello@mars.agency` is shown).
-4. **Contact form** — it opens the visitor's email app pre-filled to `hello@mars.agency`
-   (works with zero backend). If you'd rather collect submissions server-side (Formspree,
-   a serverless function, etc.), that's a small swap in `js/script.js`.
-5. **Domain / email** — confirm `hello@mars.agency` is the address you want public.
-6. **Social preview image** — `og:image` on the home page points at an SVG, which Facebook,
+3. **Social links** — Instagram / LinkedIn in the footer point to `#`. Add the real URLs.
+4. **Phone number** — the guidelines list a placeholder (`+974 XXXX XXXX`); add the real one
+   if you want it on the site (currently only the email address is shown).
+5. **Social preview image** — `og:image` on the home page points at an SVG, which Facebook,
    LinkedIn and WhatsApp all reject. Needs a 1200×630 PNG. The interior pages have no OG tags
    at all yet.
-7. **`work.html` still shows abstract mockups**, not real projects — the three builds in
+6. **`work.html` still shows abstract mockups**, not real projects — the three builds in
    `MARS/CLIENTS/` (Origami, Fifteen by Faubourg, Artist Cafe) are the obvious candidates.
+
+## House style
+
+The copy contains **no hyphens or em dashes** — not in body text, headings, meta descriptions,
+`alt` text or `aria-label`s. Compound words are spelled open (`tap to connect`, `world class`,
+`laser etched`) or reworded where splitting them would read badly (`Ecommerce`, `Extras` rather
+than `Add-on`). Sentences that would have leaned on an em dash are restructured with a comma,
+colon or full stop rather than just swapping the character. Page titles use the brand middot:
+`Services · MARS`.
+
+Keep to this when adding copy. CSS class names, HTML attributes and URLs obviously still use
+hyphens — the rule is about what a reader sees.
 
 ## Deploying
 

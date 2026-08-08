@@ -441,7 +441,7 @@ ul, ol { list-style: none; }
 
 /* ============================== SIGNALS ============================== */
 .signals { padding: clamp(3rem, 7vw, 5rem) 0; background: var(--surface-1); border-block: 1px solid var(--line-dark); }
-.signals__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
+.signals__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; }
 .signal { padding: 0.5rem; }
 .signal__value {
   display: block; font-family: var(--font-display); font-weight: 400;
@@ -478,6 +478,10 @@ ul, ol { list-style: none; }
 .field input:user-invalid, .field textarea:user-invalid { border-color: var(--terracotta); }
 .contact-form__note { margin-top: 1rem; font-size: 0.8rem; color: var(--n-8a); text-align: center; }
 .contact-form__note.is-ok { color: var(--gold-light); }
+.contact-form__note.is-error { color: var(--dust-orange); }
+/* Honeypot: off-canvas rather than display:none, which some bots detect and skip */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
 /* ============================== FOOTER ============================== */
 .footer { background: var(--deep-space); border-top: 1px solid var(--line-dark); padding: clamp(3.5rem, 8vw, 6rem) 0 2.5rem; }
@@ -724,7 +728,7 @@ ul, ol { list-style: none; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .steps--3 { grid-template-columns: repeat(3, 1fr); }
   .prod-grid { grid-template-columns: repeat(2, 1fr); }
-  .signals__grid { grid-template-columns: repeat(2, 1fr); gap: 2.4rem 1.5rem; }
+  .signals__grid { grid-template-columns: repeat(3, 1fr); gap: 2.4rem 1.5rem; }
   .why__inner { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }

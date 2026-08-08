@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — MARS</title>
-  <meta name="description" content="Tell MARS where you're headed and we'll map the launch — a plan, a timeline, and a straight answer. hello@mars.agency · Doha, Qatar · Cairo, Egypt." />
+  <title>Contact · MARS</title>
+  <meta name="description" content="Tell MARS where you're headed and we'll map the launch: a plan, a timeline, and a straight answer. infomarsdigital@gmail.com · Doha, Qatar." />
   <meta name="theme-color" content="#050505" />
   <link rel="icon" type="image/svg+xml" href="assets/logos/MARS_Icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
 
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a class="nav__brand" href="index.html" aria-label="MARS — home">
+      <a class="nav__brand" href="index.html" aria-label="MARS home">
         <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS" class="nav__logo" />
       </a>
       <nav class="nav__links" aria-label="Primary">
@@ -69,19 +69,30 @@
       <div class="container contact__inner">
         <div class="contact__copy reveal">
           <p class="eyebrow eyebrow--gold">Ready when you are</p>
-          <h1 class="contact__title">So — where do you<br />want to be seen?</h1>
+          <h1 class="contact__title">So, where do you<br />want to be seen?</h1>
           <p class="contact__sub">
             Tell us where you're headed. We'll map the launch and come back with a plan,
             a timeline, and a straight answer.
           </p>
           <ul class="contact__details">
-            <li><span>Email</span><a href="mailto:hello@mars.agency">hello@mars.agency</a></li>
-            <li><span>Based</span><p>Doha, Qatar · Cairo, Egypt</p></li>
-            <li><span>Hours</span><p>Sun–Thu · 9am–6pm AST</p></li>
+            <li><span>Email</span><a href="mailto:infomarsdigital@gmail.com">infomarsdigital@gmail.com</a></li>
+            <li><span>Based</span><p>Doha, Qatar</p></li>
           </ul>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" novalidate>
+        <!--
+          FORMSPREE: replace YOUR_FORM_ID below with the ID from your Formspree dashboard,
+          e.g. action="https://formspree.io/f/xayzbwkd". Until you do, the form quietly falls
+          back to opening the visitor's email app, so it never appears broken.
+        -->
+        <form class="contact-form reveal" id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New project enquiry via marsdigital" />
+          <!-- Honeypot: real people never see this, bots fill it in and Formspree drops them -->
+          <div class="hp" aria-hidden="true">
+            <label for="cf-website">Leave this empty</label>
+            <input type="text" id="cf-website" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
           <div class="field">
             <label for="cf-name">Name</label>
             <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Your name" />
@@ -98,9 +109,9 @@
             <label for="cf-message">Where do you want to be seen?</label>
             <textarea id="cf-message" name="message" rows="4" required placeholder="A few lines about your business and what you're after."></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--block">Map my launch</button>
+          <button type="submit" class="btn btn--primary btn--block" id="cf-submit">Map my launch</button>
           <p class="contact-form__note" id="formNote" role="status" aria-live="polite">
-            Opens your email app with the details filled in — no account needed.
+            We read every enquiry and reply within one working day.
           </p>
         </form>
       </div>
@@ -110,7 +121,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS — Creative Agency for Digital Solutions" class="footer__logo" />
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS · Creative Agency for Digital Solutions" class="footer__logo" />
         <p class="footer__tagline">From where you are, to where you want to be seen.</p>
       </div>
       <nav class="footer__col" aria-label="Explore">
@@ -130,14 +141,14 @@
       <nav class="footer__col" aria-label="Connect">
         <h4>Connect</h4>
         <a href="contact.html">Start a project</a>
-        <a href="mailto:hello@mars.agency">hello@mars.agency</a>
+        <a href="mailto:infomarsdigital@gmail.com">infomarsdigital@gmail.com</a>
         <a href="#" data-social="instagram">Instagram</a>
         <a href="#" data-social="linkedin">LinkedIn</a>
       </nav>
     </div>
     <div class="container footer__bottom">
       <p>© <span id="year">2026</span> MARS · Creative Agency for Digital Solutions</p>
-      <p class="footer__made">Doha · Cairo</p>
+      <p class="footer__made">Doha, Qatar</p>
     </div>
   </footer>
 
