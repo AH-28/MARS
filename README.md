@@ -128,13 +128,12 @@ Other details worth knowing:
    Formspree emails you. Until that's done, submissions are not delivered.
 2. **The NFC range** — review the five products on `nfc.html` (see above) and swap the CSS
    mockups for real photography.
-3. **Social links** — Instagram / LinkedIn in the footer point to `#`. Add the real URLs.
-4. **Phone number** — the guidelines list a placeholder (`+974 XXXX XXXX`); add the real one
+3. **Phone number** — the guidelines list a placeholder (`+974 XXXX XXXX`); add the real one
    if you want it on the site (currently only the email address is shown).
-5. **Social preview image** — `og:image` on the home page points at an SVG, which Facebook,
+4. **Social preview image** — `og:image` on the home page points at an SVG, which Facebook,
    LinkedIn and WhatsApp all reject. Needs a 1200×630 PNG. The interior pages have no OG tags
    at all yet.
-6. **`work.html` still shows abstract mockups**, not real projects — the three builds in
+5. **`work.html` still shows abstract mockups**, not real projects — the three builds in
    `MARS/CLIENTS/` (Origami, Fifteen by Faubourg, Artist Cafe) are the obvious candidates.
 
 ## House style
