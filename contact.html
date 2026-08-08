@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — MARS</title>
+  <meta name="description" content="Tell MARS where you're headed and we'll map the launch — a plan, a timeline, and a straight answer. hello@mars.agency · Doha, Qatar · Cairo, Egypt." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/MARS_Icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="MARS — home">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS" class="nav__logo" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <div class="nav__dd">
+          <button class="nav__dd-btn" id="svcBtn" aria-expanded="false" aria-controls="svcMenu" aria-haspopup="true">
+            Services
+            <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="nav__dd-menu" id="svcMenu" role="group" aria-labelledby="svcBtn">
+            <a href="services.html" class="nav__dd-all">All services</a>
+            <a href="nfc.html">Smart NFC Cards<small>Cards, tags &amp; stands that tap to connect</small></a>
+            <a href="websites.html">Websites &amp; Refurbishment<small>New builds, and rescues of existing sites</small></a>
+            <a href="marketing.html">Marketing<small>Campaigns, delivered with our partners</small></a>
+          </div>
+        </div>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--primary btn--sm">Start a project</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="work.html">Work</a>
+      <button class="mobile-menu__toggle" id="mobileSvcToggle" aria-expanded="false" aria-controls="mobileSvc">
+        Services
+        <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+      </button>
+      <div class="mobile-menu__sub" id="mobileSvc" hidden>
+        <a href="services.html">All services</a>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+      </div>
+      <a href="approach.html">Approach</a>
+      <a href="why.html">Why MARS</a>
+      <a href="contact.html" class="btn btn--primary">Start a project</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- CONTACT -->
+    <section class="contact" id="contact" style="padding-top: clamp(9rem, 16vh, 12rem);">
+      <canvas class="contact__canvas sky" data-density="0.8" aria-hidden="true"></canvas>
+      <div class="container contact__inner">
+        <div class="contact__copy reveal">
+          <p class="eyebrow eyebrow--gold">Ready when you are</p>
+          <h1 class="contact__title">So — where do you<br />want to be seen?</h1>
+          <p class="contact__sub">
+            Tell us where you're headed. We'll map the launch and come back with a plan,
+            a timeline, and a straight answer.
+          </p>
+          <ul class="contact__details">
+            <li><span>Email</span><a href="mailto:hello@mars.agency">hello@mars.agency</a></li>
+            <li><span>Based</span><p>Doha, Qatar · Cairo, Egypt</p></li>
+            <li><span>Hours</span><p>Sun–Thu · 9am–6pm AST</p></li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="cf-company">Company <span class="opt">(optional)</span></label>
+            <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="Company name" />
+          </div>
+          <div class="field">
+            <label for="cf-message">Where do you want to be seen?</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="A few lines about your business and what you're after."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Map my launch</button>
+          <p class="contact-form__note" id="formNote" role="status" aria-live="polite">
+            Opens your email app with the details filled in — no account needed.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS — Creative Agency for Digital Solutions" class="footer__logo" />
+        <p class="footer__tagline">From where you are, to where you want to be seen.</p>
+      </div>
+      <nav class="footer__col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <nav class="footer__col" aria-label="Services">
+        <h4>Services</h4>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="services.html">All services</a>
+      </nav>
+      <nav class="footer__col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="contact.html">Start a project</a>
+        <a href="mailto:hello@mars.agency">hello@mars.agency</a>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> MARS · Creative Agency for Digital Solutions</p>
+      <p class="footer__made">Doha · Cairo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Websites &amp; Refurbishment — MARS</title>
+  <meta name="description" content="MARS builds fast, bespoke websites — and rescues the ones you already have. New builds live in about three weeks, plus refurbishment for sites that are slow, dated, or quietly losing you business." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/MARS_Icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="MARS — home">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS" class="nav__logo" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <div class="nav__dd">
+          <button class="nav__dd-btn" id="svcBtn" aria-expanded="false" aria-controls="svcMenu" aria-haspopup="true">
+            Services
+            <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="nav__dd-menu" id="svcMenu" role="group" aria-labelledby="svcBtn">
+            <a href="services.html" class="nav__dd-all">All services</a>
+            <a href="nfc.html">Smart NFC Cards<small>Cards, tags &amp; stands that tap to connect</small></a>
+            <a href="websites.html">Websites &amp; Refurbishment<small>New builds, and rescues of existing sites</small></a>
+            <a href="marketing.html">Marketing<small>Campaigns, delivered with our partners</small></a>
+          </div>
+        </div>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--primary btn--sm">Start a project</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="work.html">Work</a>
+      <button class="mobile-menu__toggle" id="mobileSvcToggle" aria-expanded="false" aria-controls="mobileSvc">
+        Services
+        <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+      </button>
+      <div class="mobile-menu__sub" id="mobileSvc" hidden>
+        <a href="services.html">All services</a>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+      </div>
+      <a href="approach.html">Approach</a>
+      <a href="why.html">Why MARS</a>
+      <a href="contact.html" class="btn btn--primary">Start a project</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <canvas class="page-hero__canvas sky" data-density="0.7" aria-hidden="true"></canvas>
+      <div class="container page-hero__inner reveal">
+        <p class="eyebrow eyebrow--gold">Websites &amp; Refurbishment</p>
+        <h1 class="page-hero__title">Build it right, <span>or put it right.</span></h1>
+        <p class="page-hero__intro">
+          Some businesses need a site. Others already have one that's slow, dated, or quietly
+          losing them work. We do both — and we'll tell you honestly which one you're looking at
+          before you spend anything.
+        </p>
+      </div>
+    </section>
+
+    <!-- TWO TRACKS -->
+    <section class="page-section page-section--dark">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow--gold">Two ways in</p>
+          <h2 class="section-title section-title--light">Start from scratch,<br />or start from what you have.</h2>
+        </div>
+
+        <div class="tracks">
+          <article class="track reveal">
+            <span class="track__tag">Track 01</span>
+            <h3 class="track__title">New Build</h3>
+            <p class="track__desc">
+              A bespoke site, designed and built from a blank page around what your business
+              actually needs to do. Yours could be live in three weeks.
+            </p>
+            <ul class="ticks">
+              <li>Marketing &amp; brochure sites</li>
+              <li>E-commerce storefronts</li>
+              <li>Web apps and booking systems</li>
+              <li>Landing pages built to convert</li>
+              <li>A CMS you can actually edit yourself</li>
+            </ul>
+          </article>
+
+          <article class="track reveal">
+            <span class="track__tag">Track 02</span>
+            <h3 class="track__title">Refurbishment</h3>
+            <p class="track__desc">
+              You already have a site. It works, more or less — but it's slow, looks its age, or
+              nobody ever gets in touch through it. We fix that without starting over.
+            </p>
+            <ul class="ticks">
+              <li>Redesign on your existing content</li>
+              <li>Speed and Core Web Vitals rescue</li>
+              <li>Mobile layouts that stop breaking</li>
+              <li>Migration off a platform you've outgrown</li>
+              <li>Conversion fixes — forms, calls, enquiries</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="page-section section--light">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow eyebrow--terra">Every build includes</p>
+          <h2 class="section-title">The things that get<br />quietly skipped.</h2>
+          <p class="section-intro">
+            None of this is an upsell. It's the difference between a site that exists and a site
+            that works, so it's in every project we take.
+          </p>
+        </div>
+        <div class="cols-2 reveal">
+          <ul class="ticks">
+            <li>Built mobile-first, because that's where your visitors are</li>
+            <li>Real performance — measured, not promised</li>
+            <li>On-page SEO and clean, crawlable markup</li>
+            <li>Accessible contrast, tap targets and keyboard navigation</li>
+          </ul>
+          <ul class="ticks">
+            <li>Analytics wired up so you can see what's happening</li>
+            <li>Hosting and domain sorted, or handed to you cleanly</li>
+            <li>Training on anything you'll be editing yourself</li>
+            <li>We're there for go-live — not just the handoff</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement">
+      <div class="container">
+        <p class="eyebrow eyebrow--gold reveal">The standard</p>
+        <p class="statement__lead reveal">
+          Your site is the first thing most people meet. <em>It should be the best</em>
+          version of the business behind it.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="eyebrow eyebrow--gold">Ready when you are</p>
+      <h2 class="cta-band__title">Send us your site. <span>We'll be honest about it.</span></h2>
+      <a href="contact.html" class="btn btn--primary">Start a project</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS — Creative Agency for Digital Solutions" class="footer__logo" />
+        <p class="footer__tagline">From where you are, to where you want to be seen.</p>
+      </div>
+      <nav class="footer__col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <nav class="footer__col" aria-label="Services">
+        <h4>Services</h4>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="services.html">All services</a>
+      </nav>
+      <nav class="footer__col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="contact.html">Start a project</a>
+        <a href="mailto:hello@mars.agency">hello@mars.agency</a>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> MARS · Creative Agency for Digital Solutions</p>
+      <p class="footer__made">Doha · Cairo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=2"></script>
+</body>
+</html>

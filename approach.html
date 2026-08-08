@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Approach — MARS</title>
+  <meta name="description" content="The MARS launch sequence: a calm countdown to lift-off. Brief, Build, Launch, Orbit — no black boxes, no endless drafts, a clear path from where you are to where you want to be seen." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/MARS_Icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" aria-label="MARS — home">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS" class="nav__logo" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <div class="nav__dd">
+          <button class="nav__dd-btn" id="svcBtn" aria-expanded="false" aria-controls="svcMenu" aria-haspopup="true">
+            Services
+            <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+          </button>
+          <div class="nav__dd-menu" id="svcMenu" role="group" aria-labelledby="svcBtn">
+            <a href="services.html" class="nav__dd-all">All services</a>
+            <a href="nfc.html">Smart NFC Cards<small>Cards, tags &amp; stands that tap to connect</small></a>
+            <a href="websites.html">Websites &amp; Refurbishment<small>New builds, and rescues of existing sites</small></a>
+            <a href="marketing.html">Marketing<small>Campaigns, delivered with our partners</small></a>
+          </div>
+        </div>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--primary btn--sm">Start a project</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="work.html">Work</a>
+      <button class="mobile-menu__toggle" id="mobileSvcToggle" aria-expanded="false" aria-controls="mobileSvc">
+        Services
+        <svg class="nav__dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg>
+      </button>
+      <div class="mobile-menu__sub" id="mobileSvc" hidden>
+        <a href="services.html">All services</a>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+      </div>
+      <a href="approach.html">Approach</a>
+      <a href="why.html">Why MARS</a>
+      <a href="contact.html" class="btn btn--primary">Start a project</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <canvas class="page-hero__canvas sky" data-density="0.7" aria-hidden="true"></canvas>
+      <div class="container page-hero__inner reveal">
+        <p class="eyebrow eyebrow--gold">The launch sequence</p>
+        <h1 class="page-hero__title">A calm countdown <span>to lift-off.</span></h1>
+        <p class="page-hero__intro">
+          No black boxes, no endless drafts. A clear path from where you are to where you
+          want to be seen — with you on the console the whole way.
+        </p>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="approach" id="approach">
+      <div class="approach__rings" aria-hidden="true"></div>
+      <div class="container">
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h2 class="step__title">Brief</h2>
+            <p class="step__desc">We start with one question — <em>where do you want to be seen?</em> Then we map the shortest path there, with a plan, a timeline, and a straight answer.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h2 class="step__title">Build</h2>
+            <p class="step__desc">Design and development in tight loops. You see progress every week, never a black box, and nothing ships without your eyes on it.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h2 class="step__title">Launch</h2>
+            <p class="step__desc">Launches, not endless drafts. We move fast without breaking trust — and we're there for go-live, not just the handoff.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h2 class="step__title">Orbit</h2>
+            <p class="step__desc">We stay on the console — measuring, refining, and pushing your numbers up after launch. We win when your numbers move.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SIGNALS -->
+    <section class="signals" aria-label="At a glance">
+      <div class="container signals__grid">
+        <div class="signal reveal">
+          <span class="signal__value" data-count="3" data-suffix=" wks">3 wks</span>
+          <span class="signal__label">From brief to a live website</span>
+        </div>
+        <div class="signal reveal">
+          <span class="signal__value">1 tap</span>
+          <span class="signal__label">From a card to a connection</span>
+        </div>
+        <div class="signal reveal">
+          <span class="signal__value">2 cities</span>
+          <span class="signal__label">On the ground — Doha &amp; Cairo</span>
+        </div>
+        <div class="signal reveal">
+          <span class="signal__value">Est. 2026</span>
+          <span class="signal__label">Built for what's next</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-band">
+    <div class="container cta-band__inner reveal">
+      <p class="eyebrow eyebrow--gold">Ready when you are</p>
+      <h2 class="cta-band__title">Start your <span>countdown.</span></h2>
+      <a href="contact.html" class="btn btn--primary">Start a project</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logos/MARS_Wordmark_White.svg?v=2" alt="MARS — Creative Agency for Digital Solutions" class="footer__logo" />
+        <p class="footer__tagline">From where you are, to where you want to be seen.</p>
+      </div>
+      <nav class="footer__col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="why.html">Why MARS</a>
+      </nav>
+      <nav class="footer__col" aria-label="Services">
+        <h4>Services</h4>
+        <a href="nfc.html">Smart NFC Cards</a>
+        <a href="websites.html">Websites &amp; Refurbishment</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="services.html">All services</a>
+      </nav>
+      <nav class="footer__col" aria-label="Connect">
+        <h4>Connect</h4>
+        <a href="contact.html">Start a project</a>
+        <a href="mailto:hello@mars.agency">hello@mars.agency</a>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> MARS · Creative Agency for Digital Solutions</p>
+      <p class="footer__made">Doha · Cairo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=2"></script>
+</body>
+</html>
