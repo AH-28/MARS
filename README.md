@@ -107,20 +107,13 @@ photography once you have it.
 
 The form posts to **Formspree**, which forwards each enquiry to `infomarsdigital@gmail.com`.
 
-**One-time setup — the form will not deliver until this is done.** In `contact.html`, the form's
-`action` is currently a placeholder:
+The live endpoint is `https://formspree.io/f/xvkpzrll`, set on the form's `action` in
+`contact.html`.
 
-```html
-<form ... action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
-
-Create a form at [formspree.io](https://formspree.io) pointed at `infomarsdigital@gmail.com`, copy
-the endpoint it gives you, and replace `YOUR_FORM_ID` with the real ID. Then confirm the
-verification email Formspree sends on the first submission.
-
-Until that's done the form **falls back to opening the visitor's email app** (`mailto:`) rather
-than erroring, so the site is never visibly broken — but you'll only receive enquiries from
-people who have a mail client set up. That is the exact gap Formspree closes.
+If that endpoint is ever removed or changed to something that isn't a Formspree URL, the JS
+**falls back to opening the visitor's email app** (`mailto:`) rather than erroring, so the form
+never becomes a dead end. That fallback only reaches people who have a mail client configured,
+which is why the Formspree endpoint matters.
 
 Other details worth knowing:
 
@@ -131,8 +124,8 @@ Other details worth knowing:
 
 ## Things to update before going live
 
-1. **Formspree endpoint** — see above. Nothing reaches your inbox from webmail users until
-   `YOUR_FORM_ID` is replaced.
+1. **Confirm the Formspree form** — submit the live form once and click the verification link
+   Formspree emails you. Until that's done, submissions are not delivered.
 2. **The NFC range** — review the five products on `nfc.html` (see above) and swap the CSS
    mockups for real photography.
 3. **Social links** — Instagram / LinkedIn in the footer point to `#`. Add the real URLs.

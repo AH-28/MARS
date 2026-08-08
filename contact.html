@@ -81,12 +81,12 @@
         </div>
 
         <!--
-          FORMSPREE: replace YOUR_FORM_ID below with the ID from your Formspree dashboard,
-          e.g. action="https://formspree.io/f/xayzbwkd". Until you do, the form quietly falls
-          back to opening the visitor's email app, so it never appears broken.
+          Posts to Formspree, which forwards each enquiry to infomarsdigital@gmail.com.
+          If this endpoint is ever cleared, the JS falls back to opening the visitor's
+          email app so the form never becomes a dead end.
         -->
         <form class="contact-form reveal" id="contactForm"
-              action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+              action="https://formspree.io/f/xvkpzrll" method="POST" novalidate>
           <input type="hidden" name="_subject" value="New project enquiry via marsdigital" />
           <!-- Honeypot: real people never see this, bots fill it in and Formspree drops them -->
           <div class="hp" aria-hidden="true">
