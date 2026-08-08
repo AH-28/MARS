@@ -314,7 +314,7 @@ ul, ol { list-style: none; }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
-.marquee__track { display: inline-flex; align-items: center; gap: 2.6rem; animation: marquee 34s linear infinite; }
+.marquee__track { display: inline-flex; align-items: center; gap: 2.6rem; animation: marquee 46s linear infinite; }
 .marquee__track span {
   font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.7rem); color: var(--n-8a); letter-spacing: 0.02em;
 }
@@ -337,7 +337,7 @@ ul, ol { list-style: none; }
 
 .services { padding: clamp(4.5rem, 10vw, 8rem) 0; }
 .services__grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.6rem);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2vw, 1.6rem);
 }
 .service-card {
   position: relative; display: flex; flex-direction: column;
@@ -701,7 +701,8 @@ ul, ol { list-style: none; }
 .partner-note p + p { margin-top: 0.8rem; }
 
 /* ============================== SERVICE INDEX (overview cards) ============================== */
-.svc-index { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.5rem); }
+/* Four services sit better as a 2x2 than as four cramped columns */
+.svc-index { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1rem, 2vw, 1.5rem); }
 .svc-index__card {
   display: flex; flex-direction: column; position: relative; overflow: hidden;
   background: var(--surface-2); border: 1px solid var(--line-dark); border-radius: var(--radius);

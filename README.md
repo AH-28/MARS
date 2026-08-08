@@ -12,9 +12,10 @@ A multi-page site — one shared stylesheet and script across every page.
 ```
 WEBSITE/
 ├── index.html            # Home (hero → marquee → positioning → "What we do")
-├── services.html         # Services hub — routes into the three service pages
+├── services.html         # Services hub — routes into the four service pages
 │   ├── nfc.html          #   Smart NFC Cards (the flagship — full product range)
 │   ├── websites.html     #   Websites & Refurbishment (new builds + rescues)
+│   ├── automation.html   #   AI Automation (workflows and AI agents)
 │   └── marketing.html    #   Marketing (scoped by MARS, run with partners)
 ├── work.html             # Work / selected craft
 ├── approach.html         # Approach (the launch sequence + signals)
@@ -31,12 +32,12 @@ WEBSITE/
 
 The top menu links to real pages (not scroll anchors). **Services is a dropdown** — it opens on
 hover, on click, and on keyboard focus, closes on Escape or an outside click, and collapses to an
-expandable sub-list in the mobile menu. Whenever you're on any of the three service pages, the
+expandable sub-list in the mobile menu. Whenever you're on any of the four service pages, the
 "Services" parent lights up gold and the specific page is marked inside the menu. A "Start a
 project" button on every page opens the Contact page.
 
-> **Heads up on editing the nav or footer.** They're duplicated verbatim in all nine HTML files —
-> there's no build step or templating, so changing a menu item means changing it nine times.
+> **Heads up on editing the nav or footer.** They're duplicated verbatim in all ten HTML files —
+> there's no build step or templating, so changing a menu item means changing it ten times.
 > Keep the blocks byte-identical when you edit them.
 
 ## Viewing it
@@ -57,13 +58,17 @@ It's a plain static site — no build step, no dependencies.
 
 - **Home** — hero, capability marquee, positioning statement, and a "What we do" overview
   leading with NFC (with a link through to the full Services page).
-- **Services** — the hub. Three cards routing into the pages below; NFC is flagged as the
-  speciality.
+- **Services** — the hub. Four cards in a 2x2 routing into the pages below; NFC is flagged as
+  the speciality.
   - **Smart NFC Cards** — the flagship page. How a tap works in three steps, then the full
     range (Metal card, PVC card, Google Review card, Tap Stand, Tags & Keyfobs), then what
     sits behind the tap.
   - **Websites & Refurbishment** — two tracks: new builds, and rescuing a site you already
     have. Plus what every build includes.
+  - **AI Automation** — the four things clients most often want automated (lead follow up,
+    customer conversations, documents and data entry, reporting and admin), how we build it,
+    and the principles we hold to. Reuses the `.svc-row` components that `services.html` freed
+    up when it became a hub.
   - **Marketing** — scoped by MARS and delivered with campaign partners. See the note below.
 - **Work** — selected craft.
 - **Approach** — the launch sequence (Brief · Build · Launch · Orbit) and at-a-glance signals.
@@ -78,7 +83,14 @@ campaign partners", and stays the client's single point of contact. That wording
 or not a specific partner arrangement is ever signed, and nothing on the site needs unpicking if
 the arrangement changes. If a partnership is formalised and you want it credited by name, the
 copy to change is the `.partner-note` block in `marketing.html` and the dropdown subtitle in the
-nav (nine files).
+nav (ten files).
+
+### AI Automation is delivered in house
+
+Like NFC and websites, AI automation is written as work MARS does itself, not partner work.
+Only Marketing is framed as partner delivered. If automation should ever route to a partner
+too, the page to change is `automation.html` and the pattern to copy is the `.partner-note`
+block in `marketing.html`.
 
 ### The NFC range is a first draft
 

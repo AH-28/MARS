@@ -269,7 +269,7 @@
 
   /* ---------------------- Active nav (multi-page) ---------------------- */
   const here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  const SERVICE_PAGES = ["services.html", "nfc.html", "websites.html", "marketing.html"];
+  const SERVICE_PAGES = ["services.html", "nfc.html", "websites.html", "automation.html", "marketing.html"];
 
   document.querySelectorAll('.nav__links a, .mobile-menu a:not(.btn)').forEach((a) => {
     const href = (a.getAttribute("href") || "").toLowerCase();
