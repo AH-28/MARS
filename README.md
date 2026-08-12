@@ -13,9 +13,9 @@ A multi-page site — one shared stylesheet and script across every page.
 WEBSITE/
 ├── index.html            # Home (hero → marquee → positioning → "What we do")
 ├── services.html         # Services hub — routes into the four service pages
-│   ├── nfc.html          #   Smart NFC Cards (the flagship — full product range)
+│   ├── nfc.html          #   Smart NFC Cards      ← focus 1 (full product range)
+│   ├── automation.html   #   AI Automation        ← focus 2 (workflows + agents)
 │   ├── websites.html     #   Websites & Refurbishment (new builds + rescues)
-│   ├── automation.html   #   AI Automation (workflows and AI agents)
 │   └── marketing.html    #   Marketing (scoped by MARS, run with partners)
 ├── work.html             # Work / selected craft
 ├── approach.html         # Approach (the launch sequence + signals)
@@ -58,26 +58,45 @@ It's a plain static site — no build step, no dependencies.
 
 - **Home** — hero, capability marquee, positioning statement, and a "What we do" overview
   leading with NFC (with a link through to the full Services page).
-- **Services** — the hub. Four cards in a 2x2 routing into the pages below; NFC is flagged as
-  the speciality.
+- **Services** — the hub. Four cards in a 2x2 routing into the pages below. The top row is the
+  two focus services, both flagged "Our focus"; the bottom row is the other two.
   - **Smart NFC Cards** — the flagship page. How a tap works in three steps, then the full
     range (Metal card, PVC card, Google Review card, Tap Stand, Tags & Keyfobs), then what
     sits behind the tap.
-  - **Websites & Refurbishment** — two tracks: new builds, and rescuing a site you already
-    have. Plus what every build includes.
   - **AI Automation** — the four things clients most often want automated (lead follow up,
     customer conversations, documents and data entry, reporting and admin), how we build it,
     and the principles we hold to. Reuses the `.svc-row` components that `services.html` freed
     up when it became a hub.
+  - **Websites & Refurbishment** — two tracks: new builds, and rescuing a site you already
+    have. Plus what every build includes.
   - **Marketing** — scoped by MARS and delivered with campaign partners. See the note below.
 - **Work** — selected craft.
 - **Approach** — the launch sequence (Brief · Build · Launch · Orbit) and at-a-glance signals.
 - **Why MARS** — values and the "mission director" story.
 - **Contact** — the enquiry form.
 
+### Two focus services, two supporting ones
+
+**Smart NFC cards and AI automation are the business.** NFC is the flagship and always has been;
+AI automation is second. Websites and marketing are real services, sold properly, but they sit
+behind those two.
+
+That hierarchy is expressed structurally rather than by deleting anything:
+
+- **Order.** NFC, then AI Automation, then Websites, then Marketing, in the nav dropdown, the
+  mobile sub-menu, the footer, both card grids and the Work tiles. All ten files.
+- **Flags.** The two focus services carry an "Our focus" flag and the `--lead` border treatment
+  (`.service-card--lead`, `.svc-index__card--lead`). The other two carry the plain gold dot.
+- **Layout.** On `services.html` the 2x2 puts both focus cards in the top row.
+- **Copy.** The home hero, both section intros and the meta descriptions lead with NFC and AI.
+- **Marquee.** Three NFC terms, three automation terms, one each for websites and marketing.
+
+To promote or demote a service later, move it in that order and add or remove the flag plus the
+`--lead` class. Nothing else keys off the ranking.
+
 ### A note on the Marketing page
 
-NFC and websites are delivered by MARS end to end. Marketing is written as **partner-delivered
+NFC, AI automation and websites are delivered by MARS end to end. Marketing is written as **partner-delivered
 and the partner is deliberately not named** — the page says MARS scopes the work, briefs "our
 campaign partners", and stays the client's single point of contact. That wording holds up whether
 or not a specific partner arrangement is ever signed, and nothing on the site needs unpicking if
